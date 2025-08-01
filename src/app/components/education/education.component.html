@@ -1,0 +1,17 @@
+<section class="education-section py-5" id="education">
+  <div class="container">
+    <h2 class="section-title text-white mb-5">Education</h2>
+
+    <div class="timeline">
+      <div class="timeline-item" *ngFor="let edu of timeline">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h4 class="degree">{{ edu.degree }}</h4>
+          <p class="duration">{{ edu.year }}</p>
+          <p class="institution"><em>{{ edu.institute }}</em></p>
+          <p class="description">{{ edu.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

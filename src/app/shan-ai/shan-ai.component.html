@@ -1,0 +1,29 @@
+<!-- Floating FAB -->
+<div class="shan-ai-fab" (click)="toggleChat()">
+  💬
+</div>
+
+<!-- Chat Window -->
+<div class="shan-ai-window" *ngIf="isOpen">
+  <div class="header">
+    <strong>ShanAI</strong>
+    <span (click)="toggleChat()">✖</span>
+  </div>
+
+  <div class="messages">
+    <div *ngFor="let msg of messages" [class.user]="msg.sender === 'user'" [class.bot]="msg.sender === 'bot'">
+      {{ msg.text }}
+    </div>
+  </div>
+
+  <div class="suggestions" *ngIf="messages.length === 0">
+  <button (click)="scrollToSection('skills')">Skills</button>
+  <button (click)="scrollToSection('projects')">Projects</button>
+  <button (click)="scrollToSection('contact')">Contact</button>
+</div>
+
+  <div class="input-area">
+    <input type="text" [(ngModel)]="userMessage" (keydown.enter)="sendMessage()" placeholder="Ask Shan AI..." />
+    <button (click)="sendMessage()">➤</button>
+  </div>
+</div>

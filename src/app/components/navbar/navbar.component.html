@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark custom-navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold "href="#about" (click)="scrollToSection($event, 'about')">SS</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" [ngClass]="{ show: !isCollapsed }" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"
+                    *ngFor="let link of ['home', 'about', 'education', 'experience', 'skills', 'projects', 'contact']">
+                    <a class="nav-link" (click)="scrollTo(link)">{{ link | titlecase }}</a>
+                </li>
+            </ul>
+
+            <div class="social-icons d-none d-lg-flex">
+                <a href="https://www.linkedin.com/in/sudharshan-sethuraman-0663392b4" target="_blank" class="icon-link" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/sudhar31" target="_blank" class="icon-link" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:shansudhar209@gmail.com" class="icon-link" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,47 @@
+.custom-navbar {
+  background-color: #181A2F;
+  padding: 0.25rem 2rem;
+  border-bottom: 1px solid #37415C;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+
+  .navbar-brand {
+    color: #FDA481;
+    font-size: 1.8rem;
+  }
+
+  .nav-link {
+    position: relative;
+    color: #E0E0E0;
+    margin: 0 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #FDA481, #B4182D, #FDA481);
+      transition: width 0.4s ease;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+
+    &:hover {
+      color: #FDA481;
+    }
+  }
+
+  .icon-link {
+    color: #E0E0E0;
+    margin-left: 1rem;
+
+    &:hover {
+      color: #FDA481;
+    }
+  }
+}

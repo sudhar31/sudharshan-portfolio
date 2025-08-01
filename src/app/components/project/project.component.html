@@ -1,0 +1,55 @@
+<section class="projects-section container py-5" id="projects">
+  <div class="container">
+  <h2 class="section-title text-center mb-5">Projects</h2>
+
+  <!-- Highlighted Project -->
+  <mat-card class="featured-project shadow-sm mb-5" appearance="outlined">
+    <div class="row g-0 align-items-center">
+      <div class="col-md-4">
+        <img mat-card-image [src]="featuredProject.image" alt="CGI Trade 360">
+      </div>
+      <div class="col-md-8 p-3">
+        <mat-card-title>{{ featuredProject.title }}</mat-card-title>
+        <mat-card-subtitle>{{ featuredProject.duration }}</mat-card-subtitle>
+        <mat-card-content>
+          <p>{{ featuredProject.description }}</p>
+          <div class="tech-tags mt-2">
+            <span *ngFor="let tech of featuredProject.tech" class="badge bg-accent me-2">{{ tech }}</span>
+          </div>
+        </mat-card-content>
+        <a *ngIf="featuredProject.link" [href]="featuredProject.link" target="_blank" rel="noopener noreferrer">
+          <mat-icon>open_in_new</mat-icon>
+        </a>
+      </div>
+    </div>
+  </mat-card>
+
+  <!-- Personal Projects Grid -->
+  <div class="row g-4">
+    <div class="col-md-6 col-lg-4" *ngFor="let project of personalProjects">
+      <mat-card class="project-card h-100 shadow-sm">
+        <img mat-card-image [src]="project.image" [alt]="project.title">
+        <mat-card-header>
+          <mat-card-title>{{ project.title }}</mat-card-title>
+          <mat-card-subtitle>{{ project.duration }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{ project.description }}</p>
+          <div class="tech-tags mt-2">
+            <span *ngFor="let tech of project.tech" class="badge bg-accent me-2">{{ tech }}</span>
+          </div>
+        </mat-card-content>
+
+        <!--<a *ngIf="featuredProject.link" [href]="featuredProject.link" target="_blank" rel="noopener noreferrer">
+          <mat-icon>open_in_new</mat-icon>
+        </a>-->
+        <mat-card-actions>
+          <a *ngIf="project.link" [href]="project.link" target="_blank" rel="noopener noreferrer">
+              <mat-icon>launch</mat-icon>
+          </a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  </div>
+</section>

@@ -1,0 +1,130 @@
+.projects-section {
+    background-color: #1e213a;
+    
+
+    .section-title {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #ffa07a;
+        margin-bottom: 3rem;
+    }
+
+    .featured-project {
+        background: linear-gradient(145deg, #181A2F, #181A2F);
+        border-radius: 1rem;
+        overflow: hidden;
+        border: 1px solid #ffa07a2a;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            max-height: 300px;
+            border-right: 2px solid #ffa07a10;
+        }
+
+        mat-card-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #ffa07a;
+        }
+
+        mat-card-subtitle {
+            font-size: 0.85rem;
+            color: #b0b0b0;
+        }
+        
+        mat-card-content {
+            color: #ddd;
+            font-size: 0.95rem;
+        }
+
+        .badge {
+            background-color: #ff8a65;
+            color: #fff;
+            font-size: 0.75rem;
+            padding: 0.4em 0.6em;
+            border-radius: 0.5rem;
+        }
+
+        a {
+            
+            margin-top: 1rem;
+            display: inline-flex;
+            align-items: center;
+
+            mat-icon {
+                font-size: 20px;
+                margin-left: 4px;
+            }
+        }
+    }
+
+    .project-card {
+        background: linear-gradient(to top left, #181a2b, #1e213a);
+        border-radius: 1rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        color: #fff;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(255, 160, 122, 0.3);
+        }
+
+        img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #ffa07a1f;
+        }
+
+        mat-card-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #ffa07a;
+        }
+
+        mat-card-subtitle {
+            font-size: 0.85rem;
+            color: #b0b0b0;
+        }
+
+        mat-card-content {
+            font-size: 0.9rem;
+            color: #ddd;
+        }
+
+        .badge {
+            background-color: #ff8a65;
+            color: #fff;
+            font-size: 0.7rem;
+            padding: 0.3em 0.6em;
+            border-radius: 0.5rem;
+        }
+
+
+        mat-card-actions {
+            display: flex;
+            justify-content: flex-end;
+
+            button {
+                color: #ffa07a;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: #ffd1c0;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .featured-project img {
+            max-height: 200px;
+        }
+
+        .project-card img {
+            height: 180px;
+        }
+    }
+}

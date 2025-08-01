@@ -1,0 +1,44 @@
+.custom-footer {
+  background-color: #121212;
+  position: relative;
+  padding-top: 3rem;
+  padding-bottom: 5rem; 
+
+  .footer-email {
+    font-size: 1.1rem;
+  }
+
+  .footer-copy {
+    margin-bottom: 0.25rem;
+    font-size: 0.95rem;
+  }
+
+  .footer-note {
+    font-size: 0.8rem;
+    color: #FDA481;
+  }
+
+  .scroll-to-top {
+    
+    bottom: 100px; 
+    right: 30px;
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+
+    &:hover {
+      background: #ff6f61;
+      color: #121212;
+      transform: scale(1.1);
+    }
+
+    mat-icon {
+      font-size: 24px;
+    }
+  }
+}
